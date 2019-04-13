@@ -1,6 +1,6 @@
 class RateMyDorm < Sinatra::Base
   get '/' do
-    erb :index
+    erb :blank
   end
 
   get '/reviews.erb' do
