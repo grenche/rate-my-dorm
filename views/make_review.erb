@@ -69,8 +69,8 @@
           </li>
           <li>
             <a class="" href="rate-room.erb">
-              <i class="icon_document_alt"></i>
-              <span>Rate a Room</span>
+              <i class="fa fa-building-o"></i>
+              <span>Rate A Room</span>
             </a>
           </li>
           <li>
@@ -104,11 +104,10 @@
       <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-files-o"></i> Form Validation</h3>
+            <h3 class="page-header"><i class="fa fa-building-o"></i> Rate A Room</h3>
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-              <li><i class="icon_document_alt"></i>Forms</li>
-              <li><i class="fa fa-files-o"></i>Form Validation</li>
+              <li><i class="fa fa-building-o"></i>Rate A Room</li>
             </ol>
           </div>
         </div>
@@ -117,103 +116,103 @@
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Form validations
+                Tell us about your room!
               </header>
               <div class="panel-body">
                 <div class="form">
                   <form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
                     <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Full Name <span class="required">*</span></label>
+                      <label for="building" class="control-label col-lg-2">Building <span class="required">*</span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                        <select class="form-control" id="building">
+                          <option selected>--</option>
+                          <option>Allen House</option>
+                          <option>Benton House</option>
+                          <option>Berg House</option>
+                          <option>Bird House</option>
+                          <option>Brooks House</option>
+                          <option>Burton Hall</option>
+                          <option>Cassat Hall</option>
+                          <option>Chaney House</option>
+                          <option>Clader House</option>
+                          <option>Collier House</option>
+                          <option>Colwell House</option>
+                          <option>Dacie Moses House</option>
+                          <option>Davis Hall</option>
+                          <option>Dixon House</option>
+                          <option>Douglas House</option>
+                          <option>Dow House</option>
+                          <option>Eugster House</option>
+                          <option>Evans Hall</option>
+                          <option>Faculty Club</option>
+                          <option>Farm House</option>
+                          <option>Geffert House</option>
+                          <option>Goodhue Hall</option>
+                          <option>Hall House</option>
+                          <option>Henrickson House</option>
+                          <option>Henry House</option>
+                          <option>Hoppin House</option>
+                          <option>Hunt Cottage</option>
+                          <option>Hunt House</option>
+                          <option>Huntington House</option>
+                          <option>James Hall</option>
+                          <option>Jewett House</option>
+                          <option>Johnson House</option>
+                          <option>Laird Hall</option>
+                          <option>Lance Hall</option>
+                          <option>Leighton Hall</option>
+                          <option>Musser Hall</option>
+                          <option>Myers Hall</option>
+                          <option>Nason House</option>
+                          <option>Northfield Option</option>
+                          <option>Nourse Hall</option>
+                          <option>Nutting House</option>
+                          <option>Olin Hall</option>
+                          <option>Owens House</option>
+                          <option>Page House East</option>
+                          <option>Page House West</option>
+                          <option>Parish House</option>
+                          <option>Parr House</option>
+                          <option>Prentice House</option>
+                          <option>Rice House</option>
+                          <option>Scott House</option>
+                          <option>Scoville Hall</option>
+                          <option>Severance Hall</option>
+                          <option>Stimson House</option>
+                          <option>Strong House</option>
+                          <option>Wade House</option>
+                          <option>Watson Hall</option>
+                          <option>Williams House</option>
+                          <option>Willis Hall</option>
+                          <option>Wilson House</option>
+                        </select>
                       </div>
                     </div>
                     <div class="form-group ">
-                      <label for="cemail" class="control-label col-lg-2">E-Mail <span class="required">*</span></label>
+                      <label for="floor" class="control-label col-lg-2">Floor <span class="required">*</span></label>
                       <div class="col-lg-10">
-                        <input class="form-control " id="cemail" type="email" name="email" required />
+                        <select class="form-control" id="floor">
+                          <option selected>--</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                        </select>
                       </div>
                     </div>
                     <div class="form-group ">
-                      <label for="curl" class="control-label col-lg-2">Website</label>
+                      <label for="room" class="control-label col-lg-2">Room <span class="required">*</span></label>
                       <div class="col-lg-10">
-                        <input class="form-control " id="curl" type="url" name="url" />
+                        <input class="form-control " id="room" required />
                       </div>
                     </div>
                     <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Subject <span class="required">*</span></label>
+                      <label for="comments" class="control-label col-lg-2">Comments</label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="subject" name="subject" minlength="5" type="text" required />
-                      </div>
-                    </div>
-                    <div class="form-group ">
-                      <label for="ccomment" class="control-label col-lg-2">Feedback</label>
-                      <div class="col-lg-10">
-                        <textarea class="form-control " id="ccomment" name="comment" required></textarea>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary" type="submit">Save</button>
-                        <button class="btn btn-default" type="button">Cancel</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-
-              </div>
-            </section>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <section class="panel">
-              <header class="panel-heading">
-                Advanced Form validations
-              </header>
-              <div class="panel-body">
-                <div class="form">
-                  <form class="form-validate form-horizontal " id="register_form" method="get" action="">
-                    <div class="form-group ">
-                      <label for="fullname" class="control-label col-lg-2">Full name <span class="required">*</span></label>
-                      <div class="col-lg-10">
-                        <input class=" form-control" id="fullname" name="fullname" type="text" />
-                      </div>
-                    </div>
-                    <div class="form-group ">
-                      <label for="address" class="control-label col-lg-2">Address <span class="required">*</span></label>
-                      <div class="col-lg-10">
-                        <input class=" form-control" id="address" name="address" type="text" />
-                      </div>
-                    </div>
-                    <div class="form-group ">
-                      <label for="username" class="control-label col-lg-2">Username <span class="required">*</span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control " id="username" name="username" type="text" />
-                      </div>
-                    </div>
-                    <div class="form-group ">
-                      <label for="password" class="control-label col-lg-2">Password <span class="required">*</span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control " id="password" name="password" type="password" />
-                      </div>
-                    </div>
-                    <div class="form-group ">
-                      <label for="confirm_password" class="control-label col-lg-2">Confirm Password <span class="required">*</span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control " id="confirm_password" name="confirm_password" type="password" />
-                      </div>
-                    </div>
-                    <div class="form-group ">
-                      <label for="email" class="control-label col-lg-2">Email <span class="required">*</span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control " id="email" name="email" type="email" />
-                      </div>
-                    </div>
-                    <div class="form-group ">
-                      <label for="agree" class="control-label col-lg-2 col-sm-3">Agree to Our Policy <span class="required">*</span></label>
-                      <div class="col-lg-10 col-sm-9">
-                        <input type="checkbox" style="width: 20px" class="checkbox form-control" id="agree" name="agree" />
+                        <textarea class="form-control " id="comments" required></textarea>
                       </div>
                     </div>
                     <div class="form-group">
