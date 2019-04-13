@@ -12,6 +12,10 @@ class RateMyDorm < Sinatra::Base
       :secret                     => SecureRandom.hex(64)
   use Rack::Protection
   register Sinatra::Flash
+
+  configure :development do
+    register Sinatra::Reloader
+  end
 end
 
 Dir['./models/*.rb'].each { |file| require file }
