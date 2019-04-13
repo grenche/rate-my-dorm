@@ -29,22 +29,20 @@ CREATE TABLE pictures
     url        VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE tags
-(
-    tag_id SERIAL PRIMARY KEY,
-    name   VARCHAR(255) NOT NULL UNIQUE
-);
-
 CREATE TABLE buildings_tags
 (
-    building_id INT NOT NULL REFERENCES buildings,
-    tag_id      INT NOT NULL REFERENCES tags,
-    PRIMARY KEY (building_id, tag_id)
+    building_id INT          NOT NULL REFERENCES buildings,
+    tag_name    VARCHAR(255) NOT NULL REFERENCES tags,
+    agree_count INT NOT NULL DEFAULT 0,
+    disagree_count INT NOT NULL DEFAULT 0,
+    PRIMARY KEY (building_id, tag_name)
 );
 
 CREATE TABLE rooms_tags
 (
-    room_id INT NOT NULL REFERENCES rooms,
-    tag_id  INT NOT NULL REFERENCES tags,
-    PRIMARY KEY (room_id, tag_id)
+    room_id  INT          NOT NULL REFERENCES rooms,
+    tag_name VARCHAR(255) NOT NULL REFERENCES tags,
+    agree_count INT NOT NULL DEFAULT 0,
+    disagree_count INT NOT NULL DEFAULT 0,
+    PRIMARY KEY (room_id, tag_name)
 );

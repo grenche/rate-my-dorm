@@ -18,6 +18,8 @@ class RateMyDorm < Sinatra::Base
   end
 end
 
+CONN = PG.connect(dbname: 'rate-my-dorm')
+
 Dir['./models/*.rb'].each { |file| require file }
 
 # User.each {|user| user.generate_token}

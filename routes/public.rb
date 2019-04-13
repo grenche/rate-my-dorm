@@ -14,4 +14,11 @@ class RateMyDorm < Sinatra::Base
   get '/find-room.erb' do
     erb :blank
   end
+
+  get '/foo' do
+    Room.all.each do |building|
+      puts building.id, building.room_number
+    end
+    ""
+  end
 end
