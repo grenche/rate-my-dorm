@@ -1,6 +1,7 @@
 class Review
   attr_reader :id
-  attr_reader :room_id
+  attr_reader :room_number
+  attr_reader :building_name
   attr_reader :rating
   attr_reader :comment
 
@@ -20,21 +21,21 @@ class Review
     end
   end
 
-  def self.get_by_building(building_id)
-    query = "SELECT * FROM reviews JOIN rooms ON rooms.room_id = reviews.room_id WHERE building_id = $1"
-    CONN.exec_params(query, [building_id]) do |result|
+  def self.get_by_building(building_name)
+    query = "SELECT * FROM reviews building_name = $1"
+    CONN.exec_params(query, [building_name]) do |result|
       return Review.new(result[0])
     end
   end
 
-  def self.get_by_room(room_id)
-    CONN.exec_params("SELECT * FROM reviews WHERE room_id = $1", [room_id]) do |result|
+  def self.get_by_room(room_number, building_name)
+    CONN.exec_params("SELECT * FROM reviews WHERE room_number = $1 AND building_name", [room_number, building_name]) do |result|
       return Review.new(result[0])
     end
   end
 
-  def self.post(room_id, rating, comment)
-    CONN.exec_params("INSERT INTO reviews (room_id, rating, comment) VALUES ($1,$2,$3)", [room_id, rating, comment])
+  def self.post(room_number, building_name, rating, comment)
+    CONN.exec_params("INSERT INTO reviews (room_number, building_name, rating, comment) VALUES ($1, $2, $3, $4)", [room_number, building_name, rating, comment])
         .check
   end
 
@@ -42,8 +43,9 @@ class Review
 
   def initialize(hash)
     @id = hash["review_id"]
-    @room_id = hash["room_id"]
+    @room_number = hash["room_number"]
     @rating = hash["rating"]
     @comment = hash["comment"]
+    @building_name = hash["building_name"]
   end
 end
